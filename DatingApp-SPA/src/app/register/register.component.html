@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row justify-content-center text-center mt-5">
+    <div class="col-md-4">
+      <form #f="ngForm" (ngSubmit)="register()">
+        <h1 class="text-primary">Sign up</h1>
+        <hr />
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            name="username"
+            placeholder="Username"
+            [(ngModel)]="user.username"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            placeholder="Password"
+            [(ngModel)]="user.password"
+          />
+        </div>
+        <button type="submit" class="btn btn-success">Register</button>
+        <button (click)="cancel()" type="button" class="btn btn-link" routerLink="/home">
+          Cancel
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
