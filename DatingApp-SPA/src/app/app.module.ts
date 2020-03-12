@@ -11,6 +11,7 @@ import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { Route } from '@angular/compiler/src/core';
+import { ErrorInterceptorProvider } from './_services/error.interceptor';
 
 const appRoutes: Routes = [
    { path: 'home', component: HomeComponent},
@@ -32,7 +33,8 @@ const appRoutes: Routes = [
       RouterModule.forRoot(appRoutes)
    ],
    providers: [
-      AuthService
+      AuthService,
+      ErrorInterceptorProvider
    ],
    bootstrap: [
       AppComponent
