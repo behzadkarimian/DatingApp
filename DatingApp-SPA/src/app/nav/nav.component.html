@@ -2,17 +2,17 @@
   <a class="navbar-brand" routerLink="/home">DatingApp</a>
 
     <ul  class="navbar-nav mr-auto">
-      <li *ngIf="loggedIn()" class="nav-item active">
-        <a class="nav-link" href="#">Matches</a>
+      <li *ngIf="loggedIn()" class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/members']">Matches</a>
       </li>
-      <li *ngIf="loggedIn()" class="nav-item">
-        <a class="nav-link" href="#">Lists</a>
+      <li *ngIf="loggedIn()" class="nav-item"  routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/lists']">Lists</a>
       </li>
-      <li *ngIf="loggedIn()" class="nav-item">
-        <a class="nav-link" href="#">Messages</a>
+      <li *ngIf="loggedIn()" class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/messages']">Messages</a>
       </li>
-      <li *ngIf="loggedIn()" class="nav-item">
-        <a class="nav-link" routerLink="/register">Register</a>
+      <li *ngIf="!loggedIn()" class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['/register']">Register</a>
       </li>
     </ul>
 

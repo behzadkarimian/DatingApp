@@ -7,19 +7,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 
 
-import {AuthService} from './_services/auth.service'
+import {AuthService} from './_services/auth.service';
 import { AppComponent } from './app.component';
 import { ValueComponent } from './value/value.component';
 import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
-import { Route } from '@angular/compiler/src/core';
 import { ErrorInterceptorProvider } from './_services/error.interceptor';
-
-const appRoutes: Routes = [
-   { path: 'home', component: HomeComponent},
-   { path: 'register', component: RegisterComponent }
-];
+import { MemberListComponent } from './member-list/member-list.component';
+import { ListsComponent } from './lists/lists.component';
+import { MessagesComponent } from './messages/messages.component';
+import { appRoutes } from './routes';
 
 @NgModule({
    declarations: [
@@ -27,7 +25,10 @@ const appRoutes: Routes = [
       ValueComponent,
       NavComponent,
       HomeComponent,
-      RegisterComponent
+      RegisterComponent,
+      MemberListComponent,
+      ListsComponent,
+      MessagesComponent
    ],
    imports: [
       BrowserModule,
