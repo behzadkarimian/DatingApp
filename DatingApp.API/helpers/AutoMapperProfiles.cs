@@ -19,4 +19,4 @@ namespace DatingApp.API.helpers
             CreateMap<Photo, PhotosForDetailedDto>();
         }
     }
-}
+} 
