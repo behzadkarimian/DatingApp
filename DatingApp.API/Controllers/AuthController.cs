@@ -74,6 +74,5 @@ namespace DatingApp.API.Controllers
             });
 
         }
-
     }
 }
